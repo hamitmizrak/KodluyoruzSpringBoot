@@ -3,6 +3,15 @@
 /memory_persist/
 
 
+### VS Code ###
+.vscode/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
 HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
@@ -18,11 +27,7 @@ target/
 .springBeans
 .sts4-cache
 
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
+
 
 ### NetBeans ###
 /nbproject/private/
@@ -34,5 +39,4 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
-### VS Code ###
-.vscode/
+
