@@ -33,7 +33,6 @@
 
 
     <dependencies>
-
         <!--Spring MVC-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -96,7 +95,6 @@
             <scope>runtime</scope>
         </dependency>
 
-
         <!--Mysql-->
        <!-- <dependency>
             <groupId>mysql</groupId>
@@ -132,8 +130,6 @@
             <scope>runtime</scope>
         </dependency>-->
 
-
-
         <!--Junit Test-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -146,7 +142,6 @@
             <artifactId>spring-security-test</artifactId>
             <scope>test</scope>
         </dependency>
-
 
         <!--libraries-->
         <!-- lombok-->
@@ -201,5 +196,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
