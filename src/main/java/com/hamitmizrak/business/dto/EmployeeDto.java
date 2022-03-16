@@ -1,4 +1,4 @@
-package com.hamitmizrak.dto;
+package com.hamitmizrak.business.dto;
 //DTO:Data Transfer Object
 
 import lombok.AllArgsConstructor;

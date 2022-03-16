@@ -1,4 +1,4 @@
-package com.hamitmizrak.entity;
+package com.hamitmizrak.data.entity;
 
 import lombok.Getter;
 import lombok.Setter;

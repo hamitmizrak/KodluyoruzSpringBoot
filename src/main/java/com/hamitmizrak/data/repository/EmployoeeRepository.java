@@ -1,4 +1,4 @@
-package com.hamitmizrak.repository;
+package com.hamitmizrak.data.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
