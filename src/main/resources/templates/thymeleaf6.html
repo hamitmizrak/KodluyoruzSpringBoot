@@ -1,0 +1,32 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Templates</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body class="container bg-dark text-white">
+<!--start codes-->
+
+
+<p th:text="${key_model1}"></p>
+<p th:text="${product_liste}"></p>
+<hr>
+<table class="table table-striped table-hover bg-primary text-white">
+    <tr th:each="temp:${product_liste}" >
+        <td th:text="${temp.productId}"  ></td>
+        <td th:text="${temp.productName}"></td>
+        <td th:text="${temp.productPrice}"></td>
+        <td th:if="${temp.productPrice>=3500}"   th:text="'Büyüktür'"></td>
+        <td th:unless="${temp.productPrice>=3500}"   th:text="'Küçüktür'"></td>
+    </tr>
+</table>
+
+
+<!--ends codes-->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
