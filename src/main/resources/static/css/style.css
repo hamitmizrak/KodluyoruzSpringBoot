@@ -1,0 +1,10 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0;
+}
+
+.thymeleaf3{
+    background-color: darkblue;
+    box-shadow: 1px 1px 5px 1px rgba(0,0,0,.8);
+}

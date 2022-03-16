@@ -1,0 +1,28 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Templates</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <script   th:src="@{/js/template.js}"></script>
+</head>
+<body class="container">
+<!--start codes-->
+
+<h1 class="text-center text-primary">Thymeleaf-3 files</h1>
+<h2> Normal Tymeleaf-1</h2>
+<h2 th:text="'thymeleaf Tymeleaf-1'" > </h2>
+<hr>
+<p th:text="${key_model1}"></p>
+<p th:text="${key_model2}"></p>
+
+<a href="/thymeleaf2" class="thymeleaf3">Click me</a>
+
+<!--ends codes-->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
