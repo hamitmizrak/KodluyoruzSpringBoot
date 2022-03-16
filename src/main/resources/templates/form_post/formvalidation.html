@@ -1,0 +1,57 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Templates</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+</head>
+<body class="container bg-dark text-white">
+<!--start codes-->
+
+<p th:text="#{register}" class="display-1 text-uppercase text-center text-primary bordered mt-5"></p>
+
+<form  th:method="post" th:action="@{/form}"  th:object="${cv_teacher}">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-2 mb-2">
+                <label th:text="#{nameandsurname}" for="namesurname"></label>
+            </div>
+            <div class="col-md-10 mb-2">
+                <input th:field="*{teacherNameSurname}" type="text" class="form-control" id="namesurname" name="namesurname" autofocus >
+                <p class="text-danger" th:if="${#fields.hasErrors('teacherNameSurname')}" th:errors="*{teacherNameSurname}" ></p>
+            </div>
+
+            <div class="col-md-2 mb-2">
+                <label th:text="#{email}" for="email"></label>
+            </div>
+            <div class="col-md-10 mb-2">
+                <input th:field="*{teacherEmail}" type="text" class="form-control" placeholder="emailiniz" id="email" name="email">
+                <p  class="text-danger" th:if="${#fields.hasErrors('teacherEmail')}"  th:errors="*{teacherEmail}" ></p>
+            </div>
+
+            <div  class="col-md-2 mb-2">
+                <label th:text="#{password}" for="password"></label>
+            </div>
+            <div class="col-md-10 mb-2">
+                <input th:field="*{teacherPassword}" type="password" class="form-control" placeholder="şifreniz" id="password" name="password">
+                <p  class="text-danger" th:if="${#fields.hasErrors('teacherPassword')}"  th:errors="*{teacherPassword}" ></p>
+            </div>
+
+            <div  class="col-md-2 mb-2">
+            </div>
+            <div class="col-md-10 mb-2">
+                <button th:text="#{clear}" type="reset" class="btn  btn-danger"> </button>
+                <button th:text="#{submit}" type="submit" class="btn  btn-primary"> </button>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+<!--ends codes-->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
