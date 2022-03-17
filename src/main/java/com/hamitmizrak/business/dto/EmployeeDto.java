@@ -13,6 +13,7 @@ import lombok.extern.log4j.Log4j2;
 @Builder
 @Log4j2
 public class EmployeeDto {
+
     private Long id;
     private String firstName;
     private String lastName;
