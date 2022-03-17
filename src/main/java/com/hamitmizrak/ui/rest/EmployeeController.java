@@ -15,7 +15,6 @@ import java.util.Map;
 @CrossOrigin(origins = "http://localhost:3000")
 public class EmployeeController {
 
-
     @Autowired
     EmployeeServices employoeeServices;
 
@@ -54,7 +53,7 @@ public class EmployeeController {
     //UPDATE
     //http://localhost:8080/api/v1/employees/1
     @PutMapping("/employees/{id}")
-    public ResponseEntity<EmployeeDto>  updateEmployee(@PathVariable Long id,  @RequestBody EmployeeDto employeeDto) throws Throwable {
+    public ResponseEntity<EmployeeDto>  updateEmployee(@PathVariable Long id,  @RequestBody EmployeeDto employeeDto) {
         employoeeServices.updateEmployee(id,employeeDto);
         return ResponseEntity.ok(employeeDto);
     }
@@ -62,14 +61,12 @@ public class EmployeeController {
     //DELETE
     //http://localhost:8080/api/v1/employees/1
     @DeleteMapping("/employees/{id}")
-    public ResponseEntity<Map<String,Boolean>> deleteEmployee(@PathVariable Long id) throws Throwable {
+    public ResponseEntity<Map<String,Boolean>> deleteEmployee(@PathVariable Long id)  {
         employoeeServices.deleteEmployee(id);
         Map<String,Boolean> response=new HashMap<>();
         response.put("deleted",Boolean.TRUE);
         return ResponseEntity.ok(response);
     }
-
-
 
 
 }
