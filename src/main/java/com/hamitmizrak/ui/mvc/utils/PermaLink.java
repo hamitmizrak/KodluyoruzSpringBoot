@@ -1,4 +1,4 @@
-package com.hamitmizrak.utils;
+package com.hamitmizrak.ui.mvc.utils;
 
 public class PermaLink {
     //  GitHub: https://github.com/hamitmizrak/KodluyoruzSpringBoot
