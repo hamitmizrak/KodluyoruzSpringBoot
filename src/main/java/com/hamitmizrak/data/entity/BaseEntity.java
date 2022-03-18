@@ -1,8 +1,7 @@
 package com.hamitmizrak.data.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
@@ -14,8 +13,7 @@ import javax.persistence.*;
 import java.util.Date;
 
 //lombok
-@Getter
-@Setter
+@Data
 
 //hibernate jpa
 @MappedSuperclass
@@ -26,7 +24,7 @@ import java.util.Date;
 public class BaseEntity {
 
     @Id
-    @Column(name="id",nullable = false)
+    @Column(name = "id",nullable = false,updatable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -36,13 +34,16 @@ public class BaseEntity {
 
     @Column(name="created_date")
     @CreatedDate
+    @CreationTimestamp
+    @Temporal(TemporalType.TIMESTAMP)
     private Date createdDate;
 
-    @Column(name="update_by")
+    @Column(name = "update_by",nullable = false)
     @LastModifiedBy
     private String updateBy;
 
-    @Column(name="update_date")
+    @Column(name = "update_date",nullable = false)
+    @Temporal(TemporalType.TIMESTAMP)
     @LastModifiedDate
     private Date updateDate;
 

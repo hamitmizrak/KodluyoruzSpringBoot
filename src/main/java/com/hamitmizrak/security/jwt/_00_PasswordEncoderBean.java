@@ -1,4 +1,4 @@
-package com.hamitmizrak.bean;
+package com.hamitmizrak.security.jwt;
 
 
 import org.springframework.context.annotation.Bean;
@@ -7,7 +7,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Configuration
-public class PasswordEncoderBean {
+public class _00_PasswordEncoderBean {
 
 
     @Bean
